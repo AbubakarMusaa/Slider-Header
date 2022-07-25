@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		VIDEO HEADER
+	</title>
+	<style type="text/css">
+		      * {
+		      	margin: 0px;
+		      	padding: 0px;
+		      	box-sizing: border-box;
+		      }
+		.container {
+			display: flex;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+			position: relative;
+			justify-content: space-between;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+
+		.container video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+	@media (min-aspect-ratio: 16/9) {
+			.container video {
+				width: 100%;
+				height: auto;
+
+			}
+		}
+
+
+	@media (max-aspect-ratio: 16/9) {
+			.container video {
+				width: auto;
+				height: 100vh;
+
+			}
+		}
+
+		.links ul {
+			display: flex;
+			padding-top: 20px;
+			list-style-type: none;
+
+		}
+
+		.links ul li {
+			padding-right: 30px;
+		}
+
+		.links ul li a {
+			text-decoration: none;
+			font-size: 15px;
+			color: black;
+			font-weight: bold;
+		}
+		.links ul li a:hover {
+			background-color: aqua;
+			border-radius:10px;
+			font-size: 20px;
+			
+		}
+
+		#active {
+			color: black;
+			font-size: 20px;
+			border-bottom: 3px solid aqua;
+		}
+
+		.navbar {
+			padding-left: 30px;
+			padding-top: 20px;
+		}
+
+		span {
+			color: aqua;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+     <video autoplay loop muted>
+     	<source src="videos/5.mp4" type="video/mp4">
+     </video>
+     <div class="navbar"><h1><span>SAVANA</span> SEA</h1></div>
+     <div class="links">
+     	<ul>
+     		<li><a href="#" id="active">HOME</a></li>
+     		<li><a href="#">GALLERY</a></li>	
+     		<li><a href="#">SERVICE</a></li>
+     	    <li><a href="#">ABOUT</a></li>
+     	    <li><a href="#">CONTACT</a></li>
+     	</ul>
+     </div>
+
+ </div>
+
+</body>
+</html>
